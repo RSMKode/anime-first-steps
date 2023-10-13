@@ -42,10 +42,12 @@ h3 {
 
 .encabezado {
     background-color: #27275D;
-    padding: 2rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
     .logo {
-        height: 6rem;
-        width: 6rem;
+        height: 7rem;
+        width: 7rem;
     }
 
     
@@ -55,7 +57,7 @@ h3 {
 
 .navegador {
     float: right;
-    padding-top:  1.5rem;
+    padding-top:  2rem;
 }
 
 .navegador a {
@@ -68,3 +70,4 @@ h3 {
     color: #ffb4dd;
     transition: all 0.3s;
 }
+
