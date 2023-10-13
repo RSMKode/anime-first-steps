@@ -11,27 +11,24 @@
 <body>
 
     <header class="encabezado">
-        <img class="logo" src="images/logo_afs.png" alt="Logo de Anime First Steps" />
-        <h1>Anime First Steps</h1>
-
-        <nav class="navegador">
-            <!-- Esto no se como ponerlo exactamente para que se entienda 
-            en el nav que son géneros -->
-            <span>Géneros:</span>
-            <ul>
-                <li><a href="#acion">Acción</a></li>
-                <li><a href="#fantasia">Fantasía</a></li>
-                <li><a href="#thriller">Thriller</a></li>
-                <li><a href="#romance">Romance</a></li>
-                <li><a href="#recuerdos_vida">Recuerdos de la vida</a></li>
-            </ul>
-        </nav>
-
-        <video class="video_loop" src="video.mp4" alt="Video en bucle de Animes Varios"></video>
+        <section class="contenedor">
+            <img class="logo" src="images/logo_afs.png" alt="Logo de Anime First Steps" />
+           
+            <nav class="navegador">
+                    <a href="#acion">Acción</a>
+                    <a href="#fantasia">Fantasía</a>
+                    <a href="#thriller">Thriller</a>
+                    <a href="#romance">Romance</a>
+                    <a href="#drama">Drama</a>
+            </nav>
+        </section>
     </header>
 
     <main>
-
+        <section class="presentacion">
+            <h1>Anime First Steps</h1>
+            <video class="video_loop" src="video.mp4" alt="Video en bucle de Animes Varios"></video>
+        </section>
         <section class="genero" id="accion">
             <h2 class="genero_nombre">Acción</h2>
 
@@ -136,8 +133,8 @@
 
         </section>
 
-        <section class="genero" id="recuerdos_vida">
-            <h2 class="genero_nombre">Recuerdos de la vida</h2>
+        <section class="genero" id="drama">
+            <h2 class="genero_nombre">Drama</h2>
 
             <article class="anime">
                 <h3 class="anime_nombre"></h3>
