@@ -1,0 +1,73 @@
+/*Globales*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.contenedor {
+    width: 80%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h1,h2,h3 {
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+/*Globales*/
+
+.encabezado {
+    background-color: #27275D;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    .logo {
+        height: 7rem;
+        width: 7rem;
+    }
+
+    
+}
+
+
+
+.navegador {
+    float: right;
+    padding-top:  2rem;
+}
+
+.navegador a {
+  color: #f546a6;
+  font-size: 2rem;
+  padding-left: 1.7rem;
+}
+
+.navegador a:hover {
+    color: #ffb4dd;
+    transition: all 0.3s;
+}
+
