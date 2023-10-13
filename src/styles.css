@@ -61,6 +61,7 @@ h3 {
   padding: 1rem;
   position: sticky;
   top: 0;
+  box-shadow: 3px 3px 13px black;
   .logo {
     height: 7rem;
     width: 7rem;
