@@ -1,63 +1,77 @@
 /*Globales*/
+* {
+  box-sizing: border-box;
+}
+
 html {
-    font-size: 62.5%;
+  font-size: 0.65em;
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-}
-
-.contenedor {
-    width: 80%;
-    max-width: 120rem;
-    margin: 0 auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
 }
 
 p {
-    font-size: 2rem;
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  margin: 0;
 }
 
-
-h1,h2,h3 {
-    margin: 0 0 5rem 0;
+h1,
+h2,
+h3 {
+  margin: 0 0 5rem 0;
 }
 
 h1 {
-    font-size: 4rem;
+  position: absolute;
+  top: 1.8rem;
+  left: 9rem;
+  display: inline;
+  font-size: 4rem;
+  text-align: center;
+  color: #ffb4dd;
 }
 
 h2 {
-    font-size: 3.6rem;
+  font-size: 3.6rem;
 }
 
 h3 {
-    font-size: 3rem;
+  font-size: 2rem;
 }
 /*Globales*/
 
 .encabezado {
-    background-color: #27275D;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    .logo {
-        height: 7rem;
-        width: 7rem;
-    }
-
-    
+  background-color: #27275d;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  .logo {
+    height: 7rem;
+    width: 7rem;
+  }
 }
 
-
-
 .navegador {
-    float: right;
-    padding-top:  2rem;
+  display: inline;
+  right: 2rem;
+  position: absolute;
+  padding-top: 2rem;
 }
 
 .navegador a {
@@ -67,7 +81,6 @@ h3 {
 }
 
 .navegador a:hover {
-    color: #ffb4dd;
-    transition: all 0.3s;
+  color: #ffb4dd;
+  transition: all 0.3s;
 }
-
