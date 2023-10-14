@@ -10,6 +10,9 @@
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 12dvh;
+}
 body {
   overflow-x: hidden;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -114,7 +117,7 @@ ul.menu > li {
   background-color: var(--color-3);
   border: 2px inset var(--color-2);
   overflow: scroll;
-  height: 30rem;
+  height: 44dvh;
 }
 .genero:nth-child(odd) {
   background-color: var(--color-1);
