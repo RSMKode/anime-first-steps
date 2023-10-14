@@ -9,13 +9,13 @@
     <title>Anime First Steps</title>
 </head>
 
-<body>
+<body id="body">
     <header class="encabezado">
-        <a href="#header"><img class="logo" src="images/logo_afs.png" alt="Logo de Anime First Steps" /></a>
+        <a href="#body"><img class="logo" src="images/logo_afs.png" alt="Logo de Anime First Steps" /></a>
         <h1>Anime First Steps</h1>
         <nav class="navegador">
-            <ul>
-                <li><a href="#acion">Acción</a></li>
+            <ul class="menu">
+                <li><a href="#accion">Acción</a></li>
                 <li><a href="#fantasia">Fantasía</a></li>
                 <li> <a href="#thriller">Thriller</a></li>
                 <li><a href="#romance">Romance</a></li>
@@ -25,133 +25,204 @@
     </header>
 
     <main>
-        <section class="presentacion">
-            <video class="video_loop" src="video.mp4" alt="Video en bucle de Animes Varios"></video>
+
+        <section id="presentacion">
+            <video class="video_loop" alt="Video en bucle de Animes Varios" autoplay loop muted>
+                <source src="video/anime_placeholder_480.mp4">
+            </video>
         </section>
+
         <section class="genero" id="accion">
-            <h2 class="genero_nombre">Acción</h2>
+            <header>
+                <h2 class="genero_nombre">Acción</h2>
+            </header>
 
-            <article class="anime">
-                <h3 class="anime_nombre">Attack on Titan</h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+            <div class="carrusel_anime">
+                <article class="anime" id="attack-titan">
+                    <h3 class="anime_nombre">Attack on Titan</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre">Naruto</h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime" id="naruto">
+                    <h3 class="anime_nombre">Naruto</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre">Full Metal Alchemist</h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime" id="full-metal">
+                    <h3 class="anime_nombre">Full Metal Alchemist</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre">Spy x Family</h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Spy x Family</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre">Jujutsu Kaisen</h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
-
+                <article class="anime">
+                    <h3 class="anime_nombre">Jujutsu Kaisen</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+            </div>
+            <footer>
+                <ul class="carrusel_lista">
+                    <li class="carrusel_boton"><a href="#attack-titan">o</a></li>
+                    <li class="carrusel_boton"><a href="#naruto">o</a></li>
+                    <li class="carrusel_boton"><a href="#full-metal">o</a></li>
+                    <li class="carrusel_boton"><a href="#">o</a></li>
+                    <li class="carrusel_boton"><a href="#">o</a></li>
+                </ul>
+            </footer>
         </section>
 
         <section class="genero" id="fantasia">
             <h2 class="genero_nombre">Fantasía</h2>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+            <div class="carrusel_anime">
+                <article class="anime">
+                    <h3 class="anime_nombre">Attack on Titan</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Naruto</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Full Metal Alchemist</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
+                <article class="anime">
+                    <h3 class="anime_nombre">Spy x Family</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+
+                <article class="anime">
+                    <h3 class="anime_nombre">Jujutsu Kaisen</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+            </div>
         </section>
 
         <section class="genero" id="thriller">
             <h2 class="genero_nombre">Thriller</h2>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+            <div class="carrusel_anime">
+                <article class="anime">
+                    <h3 class="anime_nombre">Attack on Titan</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Naruto</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Full Metal Alchemist</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+
+                <article class="anime">
+                    <h3 class="anime_nombre">Spy x Family</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+
+                <article class="anime">
+                    <h3 class="anime_nombre">Jujutsu Kaisen</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+            </div>
 
         </section>
 
         <section class="genero" id="romance">
             <h2 class="genero_nombre">Romance</h2>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+            <div class="carrusel_anime">
+                <article class="anime">
+                    <h3 class="anime_nombre">Attack on Titan</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Naruto</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Full Metal Alchemist</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+
+                <article class="anime">
+                    <h3 class="anime_nombre">Spy x Family</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+
+                <article class="anime">
+                    <h3 class="anime_nombre">Jujutsu Kaisen</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+            </div>
 
         </section>
 
         <section class="genero" id="drama">
             <h2 class="genero_nombre">Drama</h2>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+            <div class="carrusel_anime">
+                <article class="anime">
+                    <h3 class="anime_nombre">Attack on Titan</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Naruto</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
 
-            <article class="anime">
-                <h3 class="anime_nombre"></h3>
-                <div class="anime_imagen"><img src="" alt="" /></div>
-                <div class="anime_sinopsis"></div>
-            </article>
+                <article class="anime">
+                    <h3 class="anime_nombre">Full Metal Alchemist</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+
+                <article class="anime">
+                    <h3 class="anime_nombre">Spy x Family</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+
+                <article class="anime">
+                    <h3 class="anime_nombre">Jujutsu Kaisen</h3>
+                    <div class="anime_imagen"><img src="" alt="" /></div>
+                    <div class="anime_sinopsis"></div>
+                </article>
+            </div>
 
         </section>
 
