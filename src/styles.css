@@ -1,29 +1,29 @@
 /*Globales*/
+:root {
+  --color-1: #27275d;
+  --color-2: #f546a6;
+  --color-3: #ffb4dd;
+}
 * {
   box-sizing: border-box;
-}
-
-html {
-  font-size: 0.65em;
-}
-
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0;
-}
-
-p {
-  font-size: 2rem;
-}
-
-ul {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-li {
-  display: inline;
+body {
+  overflow-x: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  font-size: 1em;
+}
+
+main {
+  position: relative;
+  height: auto;
+}
+
+p {
+  font-size: 2rem;
 }
 
 a {
@@ -31,57 +31,117 @@ a {
   margin: 0;
 }
 
-h1,
-h2,
-h3 {
-  margin: 0 0 5rem 0;
-}
-
 h1 {
-  position: absolute;
-  top: 1.8rem;
-  left: 9rem;
   display: inline;
-  font-size: 4rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 9rem;
+  font-size: 3rem;
   text-align: center;
   color: #ffb4dd;
 }
 
 h2 {
-  font-size: 3.6rem;
+  display: inline;
+  position: absolute;
+  top: 1.2rem;
+  left: 10rem;
+  font-size: 3rem;
+  text-align: center;
 }
 
 h3 {
+  display: inline;
   font-size: 2rem;
+  text-align: center;
 }
+
 /*Globales*/
 
+#presentacion {
+  background-color: black;
+}
+
 .encabezado {
-  background-color: #27275d;
-  padding: 1rem;
   position: sticky;
+  height: 12dvh;
+  width: 100dvw;
+  background-color: var(--color-1);
   top: 0;
   box-shadow: 3px 3px 13px black;
-  .logo {
-    height: 7rem;
-    width: 7rem;
-  }
+  z-index: 1;
+}
+
+.video_loop {
+  width: 100dvw;
+  object-fit: fill;
+}
+
+.logo {
+  height: 7rem;
+  width: 7rem;
 }
 
 .navegador {
   display: inline;
-  right: 2rem;
   position: absolute;
-  padding-top: 2rem;
+  right: 4rem;
+  bottom: 2.5rem;
 }
 
 .navegador a {
-  color: #f546a6;
-  font-size: 2rem;
-  padding-left: 1.7rem;
+  color: var(--color-2);
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navegador a:hover {
-  color: #ffb4dd;
+  color: var(--color-3);
   transition: all 0.3s;
+}
+
+ul.menu {
+  list-style: none;
+}
+
+ul.menu > li {
+  display: inline;
+}
+
+.genero {
+  position: relative;
+  background-color: var(--color-3);
+  border: 2px inset var(--color-2);
+  overflow: scroll;
+  height: 30rem;
+}
+.genero:nth-child(odd) {
+  background-color: var(--color-1);
+}
+
+.carrusel_anime {
+  width: 500dvw;
+  height: 100%;
+}
+
+.anime {
+  position: relative;
+  top: 20%;
+  border: 2px solid red;
+  display: inline-block;
+  width: 99dvw;
+  height: 65%;
+}
+
+ul.carrusel_lista {
+  position: absolute;
+  bottom: 2rem;
+  left: 45dvw;
+  width: 10dvw;
+  list-style: none;
+}
+
+li.carrusel_boton {
+  display: inline;
 }
