@@ -37,9 +37,9 @@ a {
 h1 {
   display: inline;
   position: absolute;
-  bottom: 2rem;
-  left: 9rem;
-  font-size: 3rem;
+  bottom: 2.1rem;
+  left: 11rem;
+  font-size: 2rem;
   text-align: center;
   color: #ffb4dd;
 }
@@ -67,8 +67,6 @@ h3 {
 
 .encabezado {
   position: sticky;
-  height: 12dvh;
-  width: 100dvw;
   background-color: var(--color-1);
   top: 0;
   box-shadow: 3px 3px 13px black;
@@ -81,21 +79,23 @@ h3 {
 }
 
 .logo {
-  height: 7rem;
-  width: 7rem;
+  margin-left: 2.7rem;
+  margin-top: 0.2rem;
+  height: 6rem;
+  width: 6rem;
 }
 
 .navegador {
   display: inline;
   position: absolute;
   right: 4rem;
-  bottom: 2.5rem;
+  bottom: 2.7rem;
 }
 
 .navegador a {
   color: var(--color-2);
   padding-left: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
