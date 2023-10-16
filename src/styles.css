@@ -1,8 +1,10 @@
 /*Globales*/
 :root {
   --color-1: #27275d;
+  --color-4: #b0b8f4;
   --color-2: #f546a6;
   --color-3: #ffb4dd;
+  --color-5: #ff8ba6;
 }
 * {
   box-sizing: border-box;
@@ -11,7 +13,7 @@
 }
 
 html {
-  scroll-padding-top: 12dvh;
+  scroll-padding-top: 7rem;
 }
 body {
   overflow-x: hidden;
@@ -20,13 +22,8 @@ body {
   font-size: 1em;
 }
 
-main {
-  position: relative;
-  height: auto;
-}
-
 p {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 a {
@@ -40,21 +37,18 @@ h1 {
   bottom: 2rem;
   left: 9rem;
   font-size: 3rem;
-  text-align: center;
+  vertical-align: center;
   color: #ffb4dd;
 }
 
 h2 {
-  display: inline;
-  position: absolute;
-  top: 1.2rem;
-  left: 10rem;
+  margin: 0.5rem 0;
   font-size: 3rem;
   text-align: center;
 }
 
 h3 {
-  display: inline;
+  margin: 0.5rem 0;
   font-size: 2rem;
   text-align: center;
 }
@@ -67,7 +61,7 @@ h3 {
 
 .encabezado {
   position: sticky;
-  height: 12dvh;
+  height: 7rem;
   width: 100dvw;
   background-color: var(--color-1);
   top: 0;
@@ -76,8 +70,11 @@ h3 {
 }
 
 .video_loop {
+  display: block;
+  margin: 0 auto;
   width: 100dvw;
-  object-fit: fill;
+  height: calc(100dvh - 7rem);
+  object-fit: cover;
 }
 
 .logo {
@@ -116,25 +113,47 @@ ul.menu > li {
   position: relative;
   background-color: var(--color-3);
   border: 2px inset var(--color-2);
-  overflow: scroll;
   height: 44dvh;
 }
 .genero:nth-child(odd) {
+  background-color: var(--color-5);
+}
+
+.genero > header {
+  position: absolute;
   background-color: var(--color-1);
+  top: 0;
+  width: 100%;
+  height: 20%;
 }
 
 .carrusel_anime {
-  width: 500dvw;
-  height: 100%;
+  /*Este font-size es para que no hayan espacios blancos entre los article,
+  ya que el letter-spacing escala directamente del font-size*/
+  font-size: 0;
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  bottom: 15%;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.genero > footer {
+  position: absolute;
+  background-color: var(--color-4);
+  bottom: 0;
+  width: 100%;
+  height: 15%;
 }
 
 .anime {
+  overflow: auto;
   position: relative;
-  top: 20%;
   border: 2px solid red;
   display: inline-block;
-  width: 99dvw;
-  height: 65%;
+  width: 100%;
+  height: 100%;
 }
 
 ul.carrusel_lista {
@@ -143,6 +162,7 @@ ul.carrusel_lista {
   left: 45dvw;
   width: 10dvw;
   list-style: none;
+  color: var(--color-3);
 }
 
 li.carrusel_boton {
