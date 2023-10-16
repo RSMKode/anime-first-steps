@@ -12,9 +12,9 @@
   padding: 0;
 }
 
- ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} 
+}
 
 html {
   scroll-padding-top: 7rem;
@@ -49,16 +49,23 @@ a {
 }
 
 h2 {
-  margin: 0.5rem 0;
+  position: absolute;
   font-size: 3rem;
   text-align: center;
   color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h3 {
+  position: absolute;
   margin: 0.5rem 0;
   font-size: 2rem;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .contenedor {
@@ -70,12 +77,33 @@ h3 {
 
 /*Globales*/
 
-#presentacion {
-  background-color: black;
-  position: relative;
-  width: 100dvw;
-  height: calc(100dvh - 7rem);
-  scroll-snap-align: start;
+.navegador {
+  display: inline;
+  position: absolute;
+  right: 4rem;
+  bottom: 2.7rem;
+}
+
+.navegador a {
+  color: var(--color-2);
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+
+.navegador a:hover {
+  color: var(--color-3);
+  transition: all 0.3s;
+  text-shadow: 0 0 12px;
+}
+
+ul.menu {
+  list-style: none;
+}
+
+ul.menu > li {
+  display: inline;
 }
 
 .encabezado {
@@ -93,10 +121,22 @@ h3 {
   width: 7rem;
 }
 
+#presentacion {
+  background-color: black;
+  position: relative;
+  width: 100dvw;
+  height: calc(100dvh - 7rem);
+  scroll-snap-align: start;
+}
+
 .overlay {
   position: absolute;
-  background: rgb(7,0,116);
-  background: linear-gradient(180deg, rgba(7,0,116,0.45702030812324934) 0%, rgba(87,0,88,0.4374124649859944) 100%);
+  background: rgb(7, 0, 116);
+  background: linear-gradient(
+    180deg,
+    rgba(7, 0, 116, 0.45702030812324934) 0%,
+    rgba(87, 0, 88, 0.4374124649859944) 100%
+  );
   height: 100%;
   width: 100%;
 }
@@ -128,40 +168,11 @@ h3 {
   object-fit: cover;
 }
 
-.navegador {
-  display: inline;
-  position: absolute;
-  right: 4rem;
-  bottom: 2.7rem;
-}
-
-.navegador a {
-  color: var(--color-2);
-  padding-left: 1.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding-bottom: 2rem;
-}
-
-.navegador a:hover {
-  color: var(--color-3);
-  transition: all 0.3s;
-  text-shadow: 0 0 12px;
-}
-
-ul.menu {
-  list-style: none;
-}
-
-ul.menu > li {
-  display: inline;
-}
-
 .genero {
   position: relative;
   background-color: var(--color-5);
   border: 2px inset var(--color-2);
-  height: 90dvh;
+  height: calc(100dvh - 7rem);
   scroll-snap-align: start;
 }
 .genero:nth-child(odd) {
@@ -170,7 +181,8 @@ ul.menu > li {
 
 .genero > header {
   position: absolute;
-  top: 3rem;
+  top: 0rem;
+  height: 15%;
   width: 100%;
 }
 
@@ -183,39 +195,65 @@ ul.menu > li {
   top: 15%;
   bottom: 15%;
   overflow-y: hidden;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
- 
+  white-space: nowrap;
 }
 
 .genero_nombre {
   color: var(--color-2);
 }
 
+.anime {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
 .anime_nombre {
+  position: aboslute;
+  top: 0;
+  height: 5%;
+  width: 100%;
   color: white;
 }
 
 .anime_imagen {
-  position: relative;
-  padding: 5rem;
-}
-
-.anime_imagen img {
   position: absolute;
-  left: 20rem;
-  width: 15%;
+  left: 0rem;
+  height: 100%;
+  width: 50%;
+}
+.anime_imagen > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  height: 80%;
   box-shadow: 2px 2px 10px rgb(0, 0, 0);
-  
 }
 
-.anime_sinopsis p {
-  top: 15rem;
-  font-size: 1.6rem;
+.anime_sinopsis {
   position: absolute;
-  left: 50rem;
-  margin: 0 auto;
-  padding: 0 15rem;
+  width: 50%;
+  height: 100%;
+  right: 0;
+}
+
+.anime_sinopsis > p {
+  /*Esto es porque el P hereda el whitespace de arriba
+  y entonces no se agrupa el texto*/
+  white-space: normal;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  font-size: 1.6rem;
 }
 
 .genero > footer {
@@ -225,14 +263,6 @@ ul.menu > li {
   height: 15%;
 }
 
-.anime {
-  overflow: auto;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
 ul.carrusel_lista {
   position: absolute;
   bottom: 2rem;
@@ -240,7 +270,6 @@ ul.carrusel_lista {
   width: 10dvw;
   height: 10dvh;
   list-style: none;
-  
 }
 
 li.carrusel_boton {
@@ -249,6 +278,7 @@ li.carrusel_boton {
 
 li.carrusel_boton a {
   float: left;
+  color: transparent;
   margin-left: 1rem;
   width: 0.8rem;
   height: 0.8rem;
