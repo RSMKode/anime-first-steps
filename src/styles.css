@@ -12,9 +12,9 @@
   padding: 0;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 html {
   scroll-padding-top: 7rem;
@@ -27,7 +27,7 @@ body {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -36,7 +36,7 @@ a {
   margin: 0;
 }
 
-h1 {
+.encabezado h1 {
   display: inline;
   position: absolute;
   bottom: 2rem;
@@ -60,8 +60,9 @@ h3 {
 }
 
 .contenedor {
+  position: relative;
   width: 90%;
-  max-width: 120rem;
+  max-width: 130rem;
   margin: 0 auto;
 }
 
@@ -84,22 +85,48 @@ h3 {
   z-index: 1;
 }
 
-.video_loop {
-  display: block;
-  margin: 0 auto;
-  width: 100dvw;
-  height: calc(100dvh - 7rem);
-  object-fit: cover;
-}
-
-
-.overlay {
-  position: absolute;
-}
-
 .logo {
   height: 7rem;
   width: 7rem;
+}
+
+.overlay {
+  position: absolute;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 133, 160, 0.5) 100%
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.overlay > h1 {
+  display: block;
+  font-size: 5rem;
+  position: absolute;
+  color: var(--color-2);
+  text-shadow: 5px 5px 15px black;
+  top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.overlay > p {
+  position: absolute;
+  bottom: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 10rem;
+  text-align: center;
+}
+
+.video_loop {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .navegador {
@@ -156,8 +183,9 @@ ul.menu > li {
   width: 100%;
   top: 20%;
   bottom: 15%;
-  overflow: scroll;
-  white-space: nowrap;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .genero > footer {
@@ -175,6 +203,7 @@ ul.menu > li {
   display: inline-block;
   width: 100%;
   height: 100%;
+  scroll-snap-align: start;
 }
 
 ul.carrusel_lista {
