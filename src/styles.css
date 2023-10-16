@@ -2,14 +2,18 @@
 :root {
   --color-1: #27275d;
   --color-4: #b0b8f4;
-  --color-2: #f546a6;
-  --color-3: #ffb4dd;
+  --color-2: #f755f1;
+  --color-3: #40bae2;
   --color-5: #ff8ba6;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -24,6 +28,7 @@ body {
 
 p {
   font-size: 1rem;
+  color: white;
 }
 
 a {
@@ -35,16 +40,17 @@ h1 {
   display: inline;
   position: absolute;
   bottom: 2rem;
-  left: 9rem;
+  margin-left: 2rem;
   font-size: 3rem;
   vertical-align: center;
-  color: #ffb4dd;
+  color: var(--color-2);
 }
 
 h2 {
   margin: 0.5rem 0;
   font-size: 3rem;
   text-align: center;
+  color: white;
 }
 
 h3 {
@@ -53,10 +59,19 @@ h3 {
   text-align: center;
 }
 
+.contenedor {
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
 /*Globales*/
 
 #presentacion {
   background-color: black;
+  position: relative;
+  width: 100dvw;
+  height: calc(100dvh - 7rem);
 }
 
 .encabezado {
@@ -75,6 +90,11 @@ h3 {
   width: 100dvw;
   height: calc(100dvh - 7rem);
   object-fit: cover;
+}
+
+
+.overlay {
+  position: absolute;
 }
 
 .logo {
@@ -99,6 +119,7 @@ h3 {
 .navegador a:hover {
   color: var(--color-3);
   transition: all 0.3s;
+  text-shadow: 0 0 12px;
 }
 
 ul.menu {
@@ -111,12 +132,12 @@ ul.menu > li {
 
 .genero {
   position: relative;
-  background-color: var(--color-3);
+  background-color: var(--color-2);
   border: 2px inset var(--color-2);
   height: 44dvh;
 }
 .genero:nth-child(odd) {
-  background-color: var(--color-5);
+  background-color: var(--color-1);
 }
 
 .genero > header {
