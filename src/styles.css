@@ -80,7 +80,8 @@ h3 {
 .navegador {
   display: inline;
   position: absolute;
-  right: 4rem;
+  width: 730px;
+  right: 0;
   bottom: 2.7rem;
 }
 
@@ -92,11 +93,35 @@ h3 {
   padding-bottom: 2rem;
 }
 
+.desplegable {
+  list-style: none;
+  visibility: hidden;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.205);
+  padding: 1rem;
+  padding-top: 0;
+  border-radius: 5px;
+}
+
+.desplegable li {
+  margin-top: 1rem;
+}
+
+.desplegable a {
+  font-size: .8rem;
+  padding-left: 0;
+}
+
 .navegador a:hover {
   color: var(--color-3);
   transition: all 0.3s;
   text-shadow: 0 0 12px;
 }
+
+.navegador li:hover > .desplegable {
+  visibility: visible;
+}
+
 
 ul.menu {
   list-style: none;
@@ -104,6 +129,7 @@ ul.menu {
 
 ul.menu > li {
   display: inline;
+  float: left;
 }
 
 .encabezado {
