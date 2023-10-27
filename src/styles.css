@@ -331,9 +331,6 @@ li.carrusel_boton a:hover {
   }
 }
 
-#attack-on-titan:target {
-  animation: desvanecimiento .5s ease;
-}
-#naruto:target {
+:where(#attack-on-titan,#naruto):target{
   animation: desvanecimiento .5s ease;
 }
