@@ -318,3 +318,19 @@ li.carrusel_boton a:hover {
   opacity: 1;
   box-shadow: 0 0 12px var(--color-3);
 }
+
+@keyframes desvanecimiento {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+:where(#attack-on-titan,#naruto):target{
+  animation: desvanecimiento .5s ease;
+}
