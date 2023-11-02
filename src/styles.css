@@ -108,7 +108,7 @@ h3 {
 }
 
 .desplegable a {
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding-left: 0;
 }
 
@@ -121,7 +121,6 @@ h3 {
 .navegador li:hover > .desplegable {
   visibility: visible;
 }
-
 
 ul.menu {
   list-style: none;
@@ -323,7 +322,7 @@ li.carrusel_boton a:hover {
   0% {
     opacity: 1;
   }
-  50% {
+  40% {
     opacity: 0;
   }
   100% {
@@ -331,6 +330,6 @@ li.carrusel_boton a:hover {
   }
 }
 
-:where(#attack-on-titan,#naruto):target{
-  animation: desvanecimiento .5s ease;
+:where(#attack-on-titan, #naruto):target {
+  animation: desvanecimiento 0.7s ease;
 }
