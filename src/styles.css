@@ -306,7 +306,7 @@ h3.anime_nombre {
 
 .anime_sinopsis {
   position: absolute;
-  height: 70%;
+  height: 65%;
   width: 100%;
 }
 
@@ -320,7 +320,7 @@ h3.anime_nombre {
   margin: 0 auto;
   height: auto;
   font-size: 1.2rem;
-  margin: 3rem auto;
+  margin: 2rem auto;
 }
 
 .anime_sinopsis > button {
