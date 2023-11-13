@@ -404,14 +404,16 @@ li.carrusel_boton {
 }
 
 li.carrusel_boton a {
+  border: 1px solid white;
   display: inline-block;
   color: transparent;
   margin: 0 0.5rem;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: var(--colo);
-  opacity: 0.75;
+  background-color: var(--color-3);
+  opacity: 1;
+  transition: ease 250ms;
 }
 
 li.carrusel_boton a:hover {
