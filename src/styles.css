@@ -2,11 +2,11 @@
 
 /*Globales*/
 :root {
-  --color-1: #27275d;
-  --color-4: #b0b8f4;
-  --color-2: #eb3c85;
-  --color-3: #40bae2;
-  --color-5: #4f275d;
+  --primary: #27275d;
+  --secondary: #4f275d;
+  --accent: #eb3c85;
+  --color-3: rgb(80, 248, 240);
+  --color-4: rgba(36, 138, 232, 1);
 }
 * {
   box-sizing: border-box;
@@ -23,6 +23,7 @@ html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
+
 body {
   overflow-x: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -45,7 +46,6 @@ p {
 
 a {
   text-decoration: none;
-  margin: 0;
 }
 
 h1,
@@ -68,7 +68,7 @@ h3 {
   height: 7rem;
   width: 100dvw;
   padding: 0 5rem;
-  background-color: var(--color-1);
+  background-color: var(--primary);
   top: 0;
   box-shadow: 0px 0px 20px black;
   z-index: 2;
@@ -81,7 +81,14 @@ h3 {
   margin-left: 2rem;
   font-size: 3rem;
   vertical-align: center;
-  color: var(--color-2);
+  color: var(--accent);
+  transition: 0.3s ease;
+}
+
+.encabezado > a:hover > h1 {
+  color: white;
+  transition: 0.3s ease;
+  text-shadow: 0 0 20px var(--accent);
 }
 
 .navegador {
@@ -93,14 +100,19 @@ h3 {
 }
 
 .navegador a {
-  color: var(--color-2);
+  color: var(--accent);
   padding: 0 1rem;
   font-size: 1.5rem;
+}
+.navegador a:hover {
+  color: white;
+  transition: 0.3s ease;
+  text-shadow: 0 0 20px var(--accent);
 }
 
 .desplegable {
   list-style: none;
-  min-width: 11rem;
+  min-width: 10rem;
   visibility: hidden;
   position: absolute;
   background-color: #27275d75;
@@ -117,18 +129,23 @@ h3 {
 }
 
 .desplegable a {
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0;
 }
 
-.navegador a:hover {
-  color: white;
-  transition: all 0.3s;
-  text-shadow: 0 0 20px var(--color-2);
+.navegador > ul > li > a {
+  transition: 0.3s;
+}
+
+.navegador > ul > li:hover {
+  transform: scale(1.1);
 }
 
 .navegador li:hover > .desplegable {
   visibility: visible;
+}
+.desplegable li:hover {
+  transform: scale(1);
 }
 
 ul.menu {
@@ -155,7 +172,7 @@ ul.menu > li {
 
 .overlay {
   position: absolute;
-  background: rgb(7, 0, 116);
+  background: var(--primary);
   background: linear-gradient(
     180deg,
     rgba(7, 0, 116, 0.45702030812324934) 0%,
@@ -169,7 +186,7 @@ ul.menu > li {
   display: block;
   font-size: 7rem;
   position: absolute;
-  color: var(--color-2);
+  color: var(--accent);
   text-shadow: 5px 5px 15px black;
   top: 16rem;
   width: 100%;
@@ -190,16 +207,16 @@ ul.menu > li {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  background-color: var(--secondary);
 }
 
 .genero {
   position: relative;
-  background-color: var(--color-5);
   height: calc(100dvh - 7rem);
   scroll-snap-align: start;
 }
 .genero:nth-child(odd) {
-  background-color: var(--color-1);
+  background-color: var(--primary);
 }
 
 .genero > header {
@@ -221,7 +238,7 @@ ul.menu > li {
   margin: 0 auto;
   text-align: center;
   font-size: 4rem;
-  color: var(--color-2);
+  color: var(--accent);
 }
 
 .carrusel_anime {
@@ -245,7 +262,7 @@ ul.menu > li {
   scroll-snap-align: center;
   background-image: linear-gradient(
     90deg,
-    rgba(51, 51, 121, 1) 0%,
+    var(--primary) 0%,
     rgba(79, 39, 93, 1) 100%
   );
 }
@@ -332,11 +349,11 @@ h3.anime_nombre {
   width: 12rem;
   cursor: pointer;
   color: white;
-  background-color: var(--color-2);
+  background-color: var(--accent);
   background-image: linear-gradient(
     90deg,
-    rgba(36, 138, 232, 1) 0%,
-    rgba(235, 60, 133, 1) 100%
+    var(--color-4) 0%,
+    var(--accent) 100%
   );
   border: none;
   border-radius: 1rem;
@@ -350,8 +367,8 @@ h3.anime_nombre {
   transition: 250ms ease;
   background-image: none;
   background-color: white;
-  color: var(--color-2);
-  box-shadow: 0px 0px 20px var(--color-2);
+  color: var(--accent);
+  box-shadow: 0px 0px 20px var(--accent);
 }
 
 .genero footer {
@@ -374,6 +391,12 @@ ul.carrusel_lista {
   height: 1rem;
   margin: 0 auto;
   list-style: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  user-select: none;
 }
 
 li.carrusel_boton {
@@ -387,7 +410,7 @@ li.carrusel_boton a {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: var(--color-3);
+  background-color: var(--colo);
   opacity: 0.75;
 }
 
@@ -395,18 +418,19 @@ li.carrusel_boton a:hover {
   transition: ease 250ms;
   opacity: 1;
   background-color: white;
-  box-shadow: 0 0 20px var(--color-2);
+  box-shadow: 0 0 20px var(--accent);
+  transform: scale(1.4);
 }
 
 .pie_pagina {
   height: calc(60dvh - 7rem);
   scroll-snap-align: end;
   position: relative;
-  background-color: #27275D;
+  background-color: #27275d;
 }
 
 .pie_pagina::before {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   left: 0;
@@ -414,7 +438,7 @@ li.carrusel_boton a:hover {
   width: 100%;
   height: 100%;
   opacity: 0.2;
-  background-image: url('images/Fondo\ Footer.jpg');
+  background-image: url("images/Fondo\ Footer.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -423,7 +447,7 @@ li.carrusel_boton a:hover {
 .logo_git {
   position: absolute;
   z-index: 10;
-  top: -.3rem;
+  top: -0.3rem;
   right: 0;
 }
 
@@ -433,12 +457,14 @@ li.carrusel_boton a:hover {
 
 .logo_git a {
   position: absolute;
-  right: .5rem;
-  top: .8rem;
+  right: 0.5rem;
+  top: 0.8rem;
   z-index: 11;
   width: 3.7rem;
   height: 3.7rem;
   border-radius: 50%;
+  font-size: 0.1rem;
+  color: transparent;
 }
 
 .pie_pagina form {
@@ -452,25 +478,28 @@ li.carrusel_boton a:hover {
   display: inline-block;
 }
 
-
 .pie_pagina .cap {
   font-size: 1.4rem;
-  color: #eb3c85;
+  color: var(--accent);
   font-weight: 600;
 }
 
-.pie_pagina input, .pie_pagina textarea {
-  border-radius: .5rem;
+.pie_pagina input,
+.pie_pagina textarea {
+  border-radius: 0.5rem;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.451);
   border: none;
   outline: none;
   margin: 0.5rem 0 0.5rem 0;
+  width: 24.5rem;
+}
+.pie_pagina textarea {
+  resize: none;
+  height: 6rem;
 }
 
 .pie_pagina input {
   height: 1.5rem;
-  width: 68%;
-  
 }
 
 .info_pie {
@@ -480,10 +509,9 @@ li.carrusel_boton a:hover {
   font-size: 1.4rem;
   margin-right: 20%;
   padding-top: 4rem;
-  
 }
 
-.info_pie article {
+.info_pie div {
   margin: 1.5rem 0;
 }
 
@@ -496,13 +524,13 @@ li.carrusel_boton a:hover {
   font-size: 1.4rem;
 }
 
-.redes a{
+.redes a {
   display: inline;
 }
 
 .info_pie img {
   width: 4rem;
-  margin: 0 .4rem 0 0;
+  margin: 0 0.4rem 0 0;
 }
 
 @keyframes desvanecimiento {
