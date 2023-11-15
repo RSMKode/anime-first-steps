@@ -74,13 +74,20 @@ h3 {
   z-index: 2;
 }
 
-.encabezado h1 {
-  display: inline;
+.titulo {
   position: absolute;
-  bottom: 2rem;
-  margin-left: 2rem;
+  height: 100%;
+  width: 33rem;
+}
+
+.encabezado h1 {
+  display: inline-block;
+  position: absolute;
+  left: 8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  /* float: right; */
   font-size: 3rem;
-  vertical-align: center;
   color: var(--accent);
   transition: 0.3s ease;
 }
@@ -252,6 +259,11 @@ ul.menu > li {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   white-space: nowrap;
+  background-image: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    rgba(79, 39, 93, 1) 100%
+  );
 }
 
 .anime {
@@ -260,11 +272,6 @@ ul.menu > li {
   width: 100%;
   height: 100%;
   scroll-snap-align: center;
-  background-image: linear-gradient(
-    90deg,
-    var(--primary) 0%,
-    rgba(79, 39, 93, 1) 100%
-  );
 }
 
 .anime_fondo {
