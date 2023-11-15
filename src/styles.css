@@ -252,14 +252,14 @@ ul.menu > li {
 .carrusel_anime {
   /*Este font-size es para que no hayan espacios blancos entre los article,
   ya que el letter-spacing escala directamente del font-size*/
-  /* font-size: 0; */
+  font-size: 0;
+  white-space: nowrap;
   position: absolute;
   width: 100%;
   height: 100%;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  white-space: nowrap;
   background-image: linear-gradient(
     90deg,
     var(--primary) 0%,
@@ -503,6 +503,7 @@ li.carrusel_boton a:hover {
   outline: none;
   margin: 0.5rem 0 0.5rem 0;
   width: 24.5rem;
+  padding: 0.3rem;
 }
 .pie_pagina textarea {
   resize: none;
@@ -556,6 +557,20 @@ li.carrusel_boton a:hover {
   }
 }
 
-:where(#attack-on-titan, #naruto, #full-metal,#bokunohero,#sao,#kimetsu,#abyss,#erased,#steins,#tokyo,#violet,#anohana,#silent):target {
+:where(
+    #attack-on-titan,
+    #naruto,
+    #fullmetal,
+    #bokunohero,
+    #sao,
+    #kimetsu,
+    #abyss,
+    #erased,
+    #steins,
+    #tokyo,
+    #violet,
+    #anohana,
+    #silent
+  ):target {
   animation: desvanecimiento 0.7s ease;
 }
