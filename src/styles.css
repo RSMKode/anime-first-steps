@@ -94,7 +94,6 @@ h3 {
 
 .encabezado > a:hover > h1 {
   color: white;
-  transition: 0.3s ease;
   text-shadow: 0 0 20px var(--accent);
 }
 
@@ -113,8 +112,8 @@ h3 {
   font-size: 1.5rem;
 }
 .navegador a:hover {
-  color: white;
   transition: 0.3s ease;
+  color: white;
   text-shadow: 0 0 20px var(--accent);
 }
 
@@ -371,7 +370,6 @@ h3.anime_nombre {
 .anime_sinopsis > button:hover {
   font-weight: 600;
   transform: scale(1.2);
-  transition: 250ms ease;
   background-image: none;
   background-color: white;
   color: var(--accent);
@@ -424,7 +422,6 @@ li.carrusel_boton a {
 }
 
 li.carrusel_boton a:hover {
-  transition: ease 250ms;
   opacity: 1;
   background-color: white;
   box-shadow: 0 0 20px var(--accent);
