@@ -103,7 +103,8 @@ h3 {
   position: absolute;
   width: auto;
   right: 5rem;
-  bottom: 2.7rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .navegador a {
@@ -150,9 +151,6 @@ h3 {
 
 .navegador li:hover > .desplegable {
   visibility: visible;
-}
-.desplegable li:hover {
-  transform: scale(1);
 }
 
 ul.menu {
