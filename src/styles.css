@@ -6,7 +6,7 @@
   --secondary: #4f275d;
   --accent: #eb3c85;
   --color-3: rgb(80, 248, 240);
-  --color-4: rgba(36, 138, 232, 1);
+  --color-4: rgb(36, 138, 232);
 }
 * {
   box-sizing: border-box;
@@ -463,7 +463,7 @@ li.carrusel_boton a:hover {
   transform: scale(1.4);
 }
 
-/* 
+/*
 FOOTER --------------------------------------------------------------------------------------------
 */
 
@@ -577,6 +577,10 @@ FOOTER -------------------------------------------------------------------------
 .info_pie img {
   width: 4rem;
   margin: 0 0.4rem 0 0;
+}
+
+.info_pie img:hover {
+  transform: scale(1.1);
 }
 
 @keyframes desvanecimiento {
