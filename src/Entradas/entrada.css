@@ -244,4 +244,89 @@ GENERO -------------------------------------------------------------------------
     object-fit: cover;
     background-color: var(--secondary);
 }
+
+/* 
+ANIME-HEADER --------------------------------------------------------------------------------------------
+*/
+
+.sinopsis {
+    position: relative;
+    height: 100dvh;
+    scroll-snap-align: start;
+    background-image: linear-gradient(
+        90deg,
+        var(--primary) 0%,
+        rgba(79, 39, 93, 1) 100%
+      );
+}
+
+.anime_fondo {
+    height: 100%;
+    width: 100%;
+    opacity: 15%;
+    object-fit: cover;
+  }
+
+.genero:nth-child(odd) .info_anime {
+    left: 5%;
+  }
+  
+  .genero:nth-child(even) .info_anime {
+    right: 5%;
+  }
+  
+  h3.anime_nombre {
+    font-size: 2.5rem;
+    line-height: 1;
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  /* 
+  ANIME-BODY --------------------------------------------------------------------------------------------
+  */
+  
+  .anime_sinopsis {
+    position: absolute;
+    height: 65%;
+    width: 100%;
+    top: 5rem;
+  }
+  
+  .anime_sinopsis > p {
+    /*Esto es porque el P hereda el whitespace de arriba
+    y entonces no se agrupa el texto*/
+    white-space: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    font-size: 1.4rem;
+    margin: 2rem auto;
+  }
+  
+.galeria {
+    position: absolute;
+    top: 25rem;
+    right: 27%;
+    width: 900px;
+    height: 500px;
+    display: flex;
+}
+
+.galeria img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.galeria img:hover {
+    width: 300px;
+    opacity: 1;
+}
   
