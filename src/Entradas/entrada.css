@@ -206,28 +206,18 @@ GENERO -------------------------------------------------------------------------
     width: 100%;
     text-align: center;
 }
-.overlay > p {
-    position: absolute;
-    top: 25rem;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 10rem;
-    text-align: center;
-    text-shadow: 5px 5px 15px black;
-}
 
 .anime_imagen {
     position: absolute;
     width: 20%;
     top: 13rem;
-    left: 7rem;
-
+    left: 15rem;
 }
 
 .info_tecnica {
     position: absolute;
     width: 50%;
-    right: 15rem;
+    right: 12rem;
     top: 12rem;
     color: white;
     font-size: 2rem;
@@ -251,7 +241,7 @@ ANIME-HEADER -------------------------------------------------------------------
 
 .sinopsis {
     position: relative;
-    height: 100dvh;
+    height: calc(100dvh - 7rem);
     scroll-snap-align: start;
     background-image: linear-gradient(
         90deg,
@@ -279,7 +269,7 @@ ANIME-HEADER -------------------------------------------------------------------
     font-size: 2.5rem;
     line-height: 1;
     width: 100%;
-    color: white;
+    color: var(--accent);
     font-weight: 300;
     text-align: center;
   }
@@ -292,7 +282,7 @@ ANIME-HEADER -------------------------------------------------------------------
     position: absolute;
     height: 65%;
     width: 100%;
-    top: 5rem;
+    top: 3rem;
   }
   
   .anime_sinopsis > p {
@@ -310,11 +300,12 @@ ANIME-HEADER -------------------------------------------------------------------
   
 .galeria {
     position: absolute;
-    top: 25rem;
+    top: 23rem;
     right: 27%;
     width: 900px;
-    height: 500px;
+    height: 400px;
     display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.308);
 }
 
 .galeria img {
@@ -329,4 +320,161 @@ ANIME-HEADER -------------------------------------------------------------------
     width: 300px;
     opacity: 1;
 }
+
+.trailer {
+    position: relative;
+    height: calc(100dvh - 7rem);
+    scroll-snap-align: start;
+    background-image: linear-gradient(
+        90deg,
+        var(--primary) 0%,
+        rgba(79, 39, 93, 1) 100%
+      );
+}
+
+.trailer_contenido {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    top: 5rem;
+}
+
+.trailer_video {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 4rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.521);
+}
+
+.trailer_titulo {
+    font-size: 2.5rem;
+    line-height: 1;
+    width: 100%;
+    color: var(--accent);
+    font-weight: 300;
+    text-align: center;
+}
+
+/*
+FOOTER --------------------------------------------------------------------------------------------
+*/
+
+.pie_pagina {
+    height: calc(60dvh - 7rem);
+    scroll-snap-align: end;
+    position: relative;
+    background-color: #27275d;
+  }
+  
+  .pie_pagina::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-image: url("../images/Fondo Footer.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  }
+  
+  .logo_git {
+    position: absolute;
+    z-index: 10;
+    top: -0.3rem;
+    right: 0;
+  }
+  
+  .logo_git img {
+    width: 8rem;
+  }
+  
+  .logo_git a {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.8rem;
+    z-index: 11;
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 50%;
+    font-size: 0.1rem;
+    color: transparent;
+  }
+  
+  .pie_pagina form {
+    position: relative;
+    font-size: 1.4rem;
+    color: white;
+    width: 30%;
+    margin-left: 20%;
+    padding-top: 4rem;
+    text-shadow: 2px 2px 10px black;
+    display: inline-block;
+  }
+  
+  .pie_pagina .cap {
+    font-size: 1.4rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  
+  .pie_pagina input,
+  .pie_pagina textarea {
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.451);
+    border: none;
+    outline: none;
+    margin: 0.5rem 0 0.5rem 0;
+    width: 24.5rem;
+    padding: 0.3rem;
+  }
+  .pie_pagina textarea {
+    resize: none;
+    height: 6rem;
+  }
+  
+  .pie_pagina input {
+    height: 1.5rem;
+  }
+  
+  .info_pie {
+    position: relative;
+    height: 80%;
+    float: right;
+    font-size: 1.4rem;
+    margin-right: 20%;
+    padding-top: 4rem;
+  }
+  
+  .info_pie div {
+    margin: 1.5rem 0;
+  }
+  
+  .info_pie a {
+    display: block;
+    color: white;
+  }
+  
+  .info_pie p {
+    font-size: 1.4rem;
+  }
+  
+  .redes a {
+    display: inline;
+  }
+  
+  .info_pie img {
+    width: 4rem;
+    margin: 0 0.4rem 0 0;
+  }
+  
+  .info_pie img:hover {
+    transform: scale(1.1);
+  }
   
