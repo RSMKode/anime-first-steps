@@ -398,6 +398,10 @@ ANIME-BODY ---------------------------------------------------------------------
   transition: 250ms ease;
 }
 
+.anime_sinopsis > button > a {
+  color: inherit;
+}
+
 .anime_sinopsis > button:hover {
   font-weight: 600;
   transform: scale(1.2);

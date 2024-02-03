@@ -257,6 +257,7 @@ SINOPSIS -----------------------------------------------------------------------
   height: calc(100dvh - 7rem);
   scroll-snap-align: start;
   padding: 2rem;
+  padding-top: 4rem;
 }
 
 .anime_fondo {
@@ -295,7 +296,7 @@ h3.anime_nombre {
 
 .galeria {
   width: 1200px;
-  height: 400px;
+  height: calc(400px - 2rem);
   display: flex;
   margin: 0 auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.308);
@@ -314,15 +315,14 @@ h3.anime_nombre {
   opacity: 1;
 }
 
+/* 
+SINOPSIS --------------------------------------------------------------------------------------------
+*/
+
 .trailer {
   position: relative;
   height: calc(100dvh - 7rem);
   scroll-snap-align: start;
-  /* background-image: linear-gradient(
-    90deg,
-    var(--primary) 0%,
-    rgba(79, 39, 93, 1) 100%
-  ); */
 }
 
 .trailer_contenido {
