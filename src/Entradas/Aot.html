@@ -64,7 +64,12 @@
       </nav>
     </header>
 
-    <main>
+    <main class="anime">
+      <img
+        class="anime_fondo"
+        src="../images/Fondo AoT.jpg"
+        alt="Fondo Anime"
+      />
       <section id="ficha-tecnica">
         <div class="overlay">
           <h1>Attack on Titan</h1>
@@ -98,17 +103,12 @@
         </div>
         <img
           class="wallpaper"
-          src="../images/Wallpaper anime AoT 1.png"
+          src="../images/Wallpaper anime AoT Hero.png"
           alt="Fondo de AOT"
         />
       </section>
 
       <section class="sinopsis">
-        <img
-          class="anime_fondo"
-          src="../images/Fondo AoT.jpg"
-          alt="Fondo Anime"
-        />
         <div class="anime_sinopsis">
           <h3 class="anime_nombre">Sinopsis</h3>
           <p>
@@ -135,15 +135,10 @@
       </section>
 
       <section class="trailer">
-        <img
-          class="anime_fondo"
-          src="../images/Fondo AoT.jpg"
-          alt="Fondo Anime"
-        />
-
         <div class="trailer_contenido">
           <h3 class="trailer_titulo">Trailer</h3>
-          <iframe class="trailer_video"
+          <iframe
+            class="trailer_video"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/MGRm4IzK1SQ?si=5JTETzj0Wz0IG2P0"
@@ -157,46 +152,69 @@
     </main>
 
     <footer class="pie_pagina">
-        <div class="logo_git">
-            <a href="https://github.com/RSMKode/anime-first-steps" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <img src="images/Seccion Github.png" alt="">
+      <div class="logo_git">
+        <a
+          href="https://github.com/RSMKode/anime-first-steps"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        <img src="images/Seccion Github.png" alt="" />
+      </div>
+
+      <form action="">
+        <p class="cap">
+          Si quieres estar al día de los mejores <br />animes, suscribete a
+          nuestra newsletter
+        </p>
+        <label for="nombre">Nombre</label>
+        <br />
+        <input type="text" id="nombre" />
+        <br />
+        <label for="email">E-Mail</label>
+        <br />
+        <input type="email" id="email" />
+        <br />
+        <label for="feedback">¿Tienes feedback que compartirnos?</label>
+        <br />
+        <textarea id="feedback"></textarea>
+      </form>
+      <section class="info_pie">
+        <div class="links-github">
+          <a
+            href="https://github.com/SamuelFriasNieto"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Github - SamuelFriasNieto</a
+          >
+          <a
+            href="https://github.com/RSMKode"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Github - RSMKode</a
+          >
         </div>
-
-        <form action="">
-            <p class="cap">Si quieres estar al día de los mejores <br>animes, suscribete a nuestra newsletter</p>
-            <label for="nombre">Nombre</label>
-            <br>
-            <input type="text" id="nombre">
-            <br>
-            <label for="email">E-Mail</label>
-            <br>
-            <input type="email" id="email">
-            <br>
-            <label for="feedback">¿Tienes feedback que compartirnos?</label>
-            <br>
-            <textarea id="feedback"></textarea>
-
-        </form>
-        <section class="info_pie">
-            <div class="links-github">
-                <a href="https://github.com/SamuelFriasNieto" target="_blank" rel="noopener noreferrer">Github -
-                    SamuelFriasNieto</a>
-                <a href="https://github.com/RSMKode" target="_blank" rel="noopener noreferrer">Github - RSMKode</a>
-            </div>
-            <div class="ubi">
-                <p>Salvador Guinot <br>46017<br>Valencia</p>
-            </div>
-            <div class="copyright">
-                <p>© 2023 AnimeFirstSteps</p>
-            </div>
-            <div class="redes">
-                <a href="" target="_blank"><img src="../images/Logo_behance.png" alt="behance"></a>
-                <a href="" target="_blank"><img src="../images/Logo_x.png" alt="x"></a>
-                <a href="" target="_blank"><img src="../images/Logo_instagram.png" alt="instagram"></a>
-                <a href="" target="_blank"><img src="../images/Logo_linkedin.png" alt="linkedin"></a>
-            </div>
-        </section>
-
+        <div class="ubi">
+          <p>Salvador Guinot <br />46017<br />Valencia</p>
+        </div>
+        <div class="copyright">
+          <p>© 2023 AnimeFirstSteps</p>
+        </div>
+        <div class="redes">
+          <a href="" target="_blank"
+            ><img src="../images/Logo_behance.png" alt="behance"
+          /></a>
+          <a href="" target="_blank"
+            ><img src="../images/Logo_x.png" alt="x"
+          /></a>
+          <a href="" target="_blank"
+            ><img src="../images/Logo_instagram.png" alt="instagram"
+          /></a>
+          <a href="" target="_blank"
+            ><img src="../images/Logo_linkedin.png" alt="linkedin"
+          /></a>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
