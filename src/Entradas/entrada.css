@@ -333,6 +333,8 @@ SINOPSIS -----------------------------------------------------------------------
 }
 
 .trailer_video {
+  border-radius: 1rem;
+  border: var(--primary) 0.5rem solid;
   display: block;
   margin: 0 auto;
   width: 70%;
