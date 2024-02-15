@@ -378,7 +378,7 @@ ANIME-BODY ---------------------------------------------------------------------
   margin: 2rem auto;
 }
 
-.anime_sinopsis > button {
+.anime_sinopsis button {
   font-size: 1.2rem;
   margin: 0 auto;
   display: block;
@@ -398,11 +398,11 @@ ANIME-BODY ---------------------------------------------------------------------
   transition: 250ms ease;
 }
 
-.anime_sinopsis > button > a {
+/* .anime_sinopsis button > a {
   color: inherit;
-}
+} */
 
-.anime_sinopsis > button:hover {
+.anime_sinopsis button:hover {
   font-weight: 600;
   transform: scale(1.2);
   background-image: none;

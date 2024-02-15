@@ -221,10 +221,12 @@ main.anime {
 }
 
 .anime_imagen {
+  object-fit: cover;
   position: absolute;
   width: 20%;
   top: 13rem;
   left: 15rem;
+  max-height: 33rem;
 }
 
 .info_tecnica {
